@@ -14,7 +14,7 @@ module.exports = prebuildify
 function prebuildify (opts, cb) {
   opts = xtend({
     arch: process.env.ARCH || os.arch(),
-    platform: process.env.PLATFORM || os.platform(),
+    platform: process.env.PREBUILD_PLATFORM || os.platform(),
     cwd: '.',
     targets: []
   }, opts)
